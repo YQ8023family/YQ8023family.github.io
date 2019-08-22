@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>YQ&#39;s ����</title>
+  <title>YQ&#39;s BLOG姚琦的小站</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>author</name>
+    <name>姚琦</name>
     
   </author>
   
