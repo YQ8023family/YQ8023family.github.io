@@ -39,29 +39,25 @@
   </entry>
   
   <entry>
-    <title>相机与图像</title>
+    <title></title>
     <link href="http://yoursite.com/2019/08/28/%E7%9B%B8%E6%9C%BA%E4%B8%8E%E5%9B%BE%E5%83%8F/"/>
     <id>http://yoursite.com/2019/08/28/相机与图像/</id>
-    <published>2019-08-28T10:52:38.000Z</published>
-    <updated>2019-08-30T00:55:53.037Z</updated>
+    <published>2019-08-28T10:52:38.325Z</published>
+    <updated>2019-08-30T01:36:53.417Z</updated>
     
-    <content type="html"><![CDATA[<p>参考：《视觉SLAM十四讲》第五章节</p><h1 id="1-相机模型"><a href="#1-相机模型" class="headerlink" title="1. 相机模型"></a>1. 相机模型</h1><ul><li>相机模型包括：针孔模型、畸变模型</li><li>针孔模型：一束光线通过针孔后，在针孔背面投影成像的关系</li><li>畸变：由于相机镜头上透镜的存在，使得光线投影到成像平面过程产生畸变</li><li>这两个模型：用来描述投影过程，还可以将外部三维点投影到相机内部成像平面，构成相机内参数</li></ul><h2 id="1-1-针孔相机模型"><a href="#1-1-针孔相机模型" class="headerlink" title="1.1 针孔相机模型"></a>1.1 针孔相机模型</h2><p><img src="/.com//C:%5CUsers%5CYQ%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566996346522.png" alt="1566996346522"></p><p><img src="/.com//C:%5CUsers%5CYQ%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566996632522.png" alt="1566996632522"></p><p><img src="/.com//C:%5CUsers%5CYQ%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566997250520.png" alt="1566997250520"></p><ul><li>相机内参：在出厂后是固定的，不会在使用过程中发生变化，通过标定可自己确定内参</li><li>相机外参：相机的位姿由旋转矩阵R和平移向量t描述，R、t 称为相机的外参，外参随相机运动发生变化</li></ul><h2 id="1-2-畸变"><a href="#1-2-畸变" class="headerlink" title="1.2 畸变"></a>1.2 畸变</h2><ul><li>透镜：一种将光线聚合或分散的设备，是为了获得好的成像效果。</li><li>畸变原因：透镜自身形状对光线传播产生影响（径向畸变）；二是在机械组装过程中，透镜和成像平面不可能完全平行，使得光线穿过投影投影到成像面时位置发生变化（切向畸变）</li><li>畸变类型：径向畸变和切向畸变</li><li>径向畸变：包括桶形畸变和枕形畸变</li><li><img src="/.com//C:%5CUsers%5CYQ%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566999974232.png" alt="1566999974232"></li></ul><h1 id="1-3-双目相机模型"><a href="#1-3-双目相机模型" class="headerlink" title="1.3 双目相机模型"></a>1.3 双目相机模型</h1><ul><li>单目相机仅根据一个像素无法确定空间点的具体位置，因为从相机光心到归一化平面连线上的所有点都可以投影至该像素上，只有当P的深度确定时，才能确定它的空间位置</li><li>双目相机原理：同步采集左右相机成像，计算图像之间视差，来估计每个像素的深度。</li><li><img src="/.com//C:%5CUsers%5CYQ%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567048965478.png" alt="1567048965478"></li></ul><h2 id="1-4-RGB-D相机模型"><a href="#1-4-RGB-D相机模型" class="headerlink" title="1.4 RGB-D相机模型"></a>1.4 RGB-D相机模型</h2><ul><li><p>双目相机通过视差计算深度，RGB-D相机是主动测量每个像素深度</p></li><li><p>RGB-D相机按原理分为：红外结构光（Structured Light）测量像素距离、飞行时间法（Time-of-flight, ToF）原理测量像素距离</p></li><li><p><img src="/.com//C:%5CUsers%5CYQ%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567061825186.png" alt="1567061825186"></p></li><li><p>RGB-D相机的深度图记录了各个像素离相机的距离，该距离以毫米为单位，因为RGB-D相机量程通常在十几米范围左右，所以采用16位整数记录，即位于0~65536之间的值，换为毫米最大可以表示65米</p></li></ul><p><img src="/.com//006.png" alt="006"></p>]]></content>
+    <content type="html"><![CDATA[<p>title: 相机与图像<br>date: 2019-08-28 18:52:38<br>categories: RGB-D<br>tags: 坐标变换</p><p>参考：《视觉SLAM十四讲》第五章节</p><h1 id="1-相机模型"><a href="#1-相机模型" class="headerlink" title="1. 相机模型"></a>1. 相机模型</h1><ul><li>相机模型包括：针孔模型、畸变模型</li><li>针孔模型：一束光线通过针孔后，在针孔背面投影成像的关系</li><li>畸变：由于相机镜头上透镜的存在，使得光线投影到成像平面过程产生畸变</li><li>这两个模型：用来描述投影过程，还可以将外部三维点投影到相机内部成像平面，构成相机内参数</li></ul><h2 id="1-1-针孔相机模型"><a href="#1-1-针孔相机模型" class="headerlink" title="1.1 针孔相机模型"></a>1.1 针孔相机模型</h2><p><img src="https://upload-images.jianshu.io/upload_images/12426161-f4b08963a34e3881.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p><img src="https://upload-images.jianshu.io/upload_images/12426161-8d85144dd3a82bb1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p><img src="https://upload-images.jianshu.io/upload_images/12426161-1702d8e6ff146466.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><ul><li>相机内参：在出厂后是固定的，不会在使用过程中发生变化，通过标定可自己确定内参</li><li>相机外参：相机的位姿由旋转矩阵R和平移向量t描述，R、t 称为相机的外参，外参随相机运动发生变化</li></ul><h2 id="1-2-畸变"><a href="#1-2-畸变" class="headerlink" title="1.2 畸变"></a>1.2 畸变</h2><ul><li>透镜：一种将光线聚合或分散的设备，是为了获得好的成像效果。</li><li>畸变原因：透镜自身形状对光线传播产生影响（径向畸变）；二是在机械组装过程中，透镜和成像平面不可能完全平行，使得光线穿过投影投影到成像面时位置发生变化（切向畸变）</li><li>畸变类型：径向畸变和切向畸变</li><li>径向畸变：包括桶形畸变和枕形畸变</li><li><img src="https://upload-images.jianshu.io/upload_images/12426161-b345f079a2cf0786.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li></ul><h1 id="1-3-双目相机模型"><a href="#1-3-双目相机模型" class="headerlink" title="1.3 双目相机模型"></a>1.3 双目相机模型</h1><ul><li>单目相机仅根据一个像素无法确定空间点的具体位置，因为从相机光心到归一化平面连线上的所有点都可以投影至该像素上，只有当P的深度确定时，才能确定它的空间位置</li><li>双目相机原理：同步采集左右相机成像，计算图像之间视差，来估计每个像素的深度。</li><li><img src="https://upload-images.jianshu.io/upload_images/12426161-ed4cb9e5760d86dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li></ul><h2 id="1-4-RGB-D相机模型"><a href="#1-4-RGB-D相机模型" class="headerlink" title="1.4 RGB-D相机模型"></a>1.4 RGB-D相机模型</h2><ul><li><p>双目相机通过视差计算深度，RGB-D相机是主动测量每个像素深度</p></li><li><p>RGB-D相机按原理分为：红外结构光（Structured Light）测量像素距离、飞行时间法（Time-of-flight, ToF）原理测量像素距离</p></li><li><p><img src="https://upload-images.jianshu.io/upload_images/12426161-4d0a42a99be3ea10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p></li><li><p>RGB-D相机的深度图记录了各个像素离相机的距离，该距离以毫米为单位，因为RGB-D相机量程通常在十几米范围左右，所以采用16位整数记录，即位于0~65536之间的值，换为毫米最大可以表示65米</p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;参考：《视觉SLAM十四讲》第五章节&lt;/p&gt;
-&lt;h1 id=&quot;1-相机模型&quot;&gt;&lt;a href=&quot;#1-相机模型&quot; class=&quot;headerlink&quot; title=&quot;1. 相机模型&quot;&gt;&lt;/a&gt;1. 相机模型&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;相机模型包括：针孔模型、畸变模型&lt;/li
+        &lt;p&gt;title: 相机与图像&lt;br&gt;date: 2019-08-28 18:52:38&lt;br&gt;categories: RGB-D&lt;br&gt;tags: 坐标变换&lt;/p&gt;
+&lt;p&gt;参考：《视觉SLAM十四讲》第五章节&lt;/p&gt;
+&lt;h1 id=&quot;1-相机模型&quot;&gt;&lt;a href=&quot;#1-相机
       
     
     </summary>
     
-      <category term="RGB-D" scheme="http://yoursite.com/categories/RGB-D/"/>
-    
-    
-      <category term="坐标变换" scheme="http://yoursite.com/tags/%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2/"/>
     
   </entry>
   
